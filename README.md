@@ -2,7 +2,7 @@
 
 ### php7.2+swoole+ssh2+yaml+php-fpm+nginx
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;就是一个普通的运行php的镜像，安装了swoole、ssh2、yaml三个插件，官方镜像中没有安装这些插件，nginx的配置依照运行ThinkPHP3.2来配置的，只要将代码目录挂载到镜像中的 /var/www/html 中即可。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一个运行php的镜像，使用centos7作为基础进行，并安装了swoole、ssh2、yaml三个php组件，官方的php镜像中没有安装这些插件，但是很多时候需要这些组件。其中nginx的配置依照运行ThinkPHP3.2来配置的，需要修改直接将自己的配置挂到对应的nginx配置目录即可，部署代码只要将项目目录挂载到 /var/www/html目录即可。
 
 #### 构建镜像：
 ```console
