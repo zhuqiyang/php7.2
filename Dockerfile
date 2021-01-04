@@ -13,7 +13,7 @@ RUN yum install nginx -y && yum install supervisor -y && yum install net-tools -
 
 COPY run.sh /root/
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY devops.conf /etc/nginx/conf.d/
+COPY default.conf /etc/nginx/conf.d/
 
 EXPOSE 80 443
 
