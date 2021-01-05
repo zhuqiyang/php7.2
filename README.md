@@ -12,3 +12,7 @@ docker build -t php7.2:0.1 .
 ```console
 docker run --name php7.2 -d -p 80:80 -p 443:443 -v /var/www/html:/var/www/html php7.2:0.1
 ```
+#### 使用已经构建好的镜像：
+```console
+docker run --name php7.2 -d -p 80:80 -p 443:443 -v /var/www/html:/var/www/html zhuqiyang/php7.2:0.2
+```
