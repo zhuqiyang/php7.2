@@ -9,8 +9,6 @@ RUN sh -c '/bin/echo -e "\n" | sh pecl install ssh2-1.0' && sh -c '/bin/echo "ex
 && sh -c '/bin/echo -e "\n" | sh pecl install yaml' && sh -c '/bin/echo "extension=yaml.so" > /etc/php.d/yaml.ini' \
 && sh -c '/bin/echo -e "\nyes\nyes\nyes\nyes" | sh pecl install swoole' && sh -c '/bin/echo "extension=swoole.so" > /etc/php.d/swoole.ini'
 
-RUN rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm && yum install ffmpeg ffmpeg-devel -y && ffmpeg -version
-
 RUN yum install nginx -y && yum install supervisor -y && yum install net-tools -y
 
 COPY run.sh /root/
