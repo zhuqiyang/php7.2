@@ -16,3 +16,4 @@ docker run --name php7.2 -d -p 80:80 -p 443:443 -v /var/www/html:/var/www/html p
 ```console
 docker run --name php7.2 -d -p 80:80 -p 443:443 -v /var/www/html:/var/www/html zhuqiyang/php7.2:0.2
 ```
+输入日志到标准输出。
