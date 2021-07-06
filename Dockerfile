@@ -11,6 +11,9 @@ RUN sh -c '/bin/echo -e "\n" | sh pecl install ssh2-1.0' && sh -c '/bin/echo "ex
 
 RUN yum install nginx -y && yum install supervisor -y && yum install net-tools -y
 
+RUN rm -rf /var/log/nginx/access.log /var/log/nginx/error.log /var/log/php-fpm/error.log \
+&& ln -s /dev/stdout /var/log/nginx/access.log && ln -s /dev/stderr /var/log/nginx/error.log && ln -s /dev/stdout /var/log/php-fpm/error.log
+
 COPY run.sh /root/
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY default.conf /etc/nginx/conf.d/
